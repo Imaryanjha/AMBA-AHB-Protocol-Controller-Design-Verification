@@ -163,3 +163,63 @@ u_master/current_state_reg[1]
 # 📌 Conclusion
 
 The synthesized **AHB Top-Level Design** successfully meets the specified **10 ns clock period** without any setup or hold timing violations. Area analysis shows that the four AHB slave memories dominate the silicon utilization, while the master, decoder, and multiplexer occupy a comparatively small area. Power analysis indicates that the clock network is the primary contributor to dynamic power consumption. Overall, the design satisfies all functional and timing requirements, making it suitable for subsequent physical design stages.
+
+---
+
+# 🏗️ Design Hierarchy & RTL Schematic
+
+The synthesized top-level AHB design consists of the following major modules:
+
+- **AHB Master**
+- **AHB Address Decoder**
+- **AHB Response/Data Multiplexer**
+- **Four Memory-Mapped AHB Slaves**
+
+The following figures illustrate the synthesized RTL hierarchy generated using **Synopsys Design Vision**.
+
+---
+
+## 📌 Top-Level RTL Hierarchy
+
+| Top-Level Design | RTL Schematic |
+|:----------------:|:-------------:|
+| <<img width="1920" height="1080" alt="Screenshot from 2026-07-07 04-05-55" src="https://github.com/user-attachments/assets/f7feff9b-c45c-44fd-9277-d5f750a8f37d" />
+ | <img width="1920" height="1080" alt="Screenshot from 2026-07-07 04-06-29" src="https://github.com/user-attachments/assets/a237b9cd-6655-4466-950d-2bbe4ccf0ea2" />
+ |
+
+**Figure 1:** Top-level synthesized RTL hierarchy (`ahb_top`).
+
+---
+
+
+---
+
+
+
+---
+
+## 📌 Response/Data Multiplexer
+
+<div align="center">
+
+<<img width="946" height="911" alt="image" src="https://github.com/user-attachments/assets/e0a71155-3ced-445c-960c-cac86d088c58" />
+>
+
+</div>
+
+**Figure 4:** Multiplexer selecting HRDATA, HREADY and HRESP from the active slave.
+
+---
+
+## 📌 Memory-Mapped Slave Modules
+
+| Slave 1 |
+:-------:|
+ <<img width="947" height="870" alt="image" src="https://github.com/user-attachments/assets/1293a8a8-2fda-4948-b811-60d26fea119a" />
+> |
+
+| Slave 2 
+|:-------:
+| <<img width="934" height="694" alt="image" src="https://github.com/user-attachments/assets/03a9f036-ec50-4639-8d49-fd9328744207" />
+
+
