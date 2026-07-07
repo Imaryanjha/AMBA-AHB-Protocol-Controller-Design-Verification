@@ -1,0 +1,58 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : ahb_top
+Version: T-2022.03-SP5
+Date   : Tue Jul  7 04:00:19 2026
+****************************************
+
+
+Library(s) Used:
+
+    tsl18fs120_scl_ss (File: /mnt/c2s/cadence/Analog_tools/FOUNDRY/scl_pdk/stdlib/fs120/spc/liberty/lib_flow_ss/tsl18fs120_scl_ss.db)
+
+
+Operating Conditions: tsl18fs120_scl_ss   Library: tsl18fs120_scl_ss
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+ahb_top                4000000           tsl18fs120_scl_ss
+
+
+Global Operating Voltage = 1.62 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  = 165.8997 mW   (96%)
+  Net Switching Power  =   6.5680 mW    (4%)
+                         ---------
+Total Dynamic Power    = 172.4677 mW  (100%)
+
+Cell Leakage Power     =  44.8599 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network    165.5784            0.0000            0.0000          165.5784  (  95.97%)  i
+register       3.8589e-02        2.1456e-02        2.5921e+07        8.5979e-02  (   0.05%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.3109            6.5466        1.8939e+07            6.8735  (   3.98%)
+--------------------------------------------------------------------------------------------------
+Total            165.9279 mW         6.5680 mW     4.4860e+07 pW       172.5379 mW
+1

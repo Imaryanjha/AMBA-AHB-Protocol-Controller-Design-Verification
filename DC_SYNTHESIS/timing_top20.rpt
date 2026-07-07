@@ -1,0 +1,1151 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 20
+Design : ahb_top
+Version: T-2022.03-SP5
+Date   : Tue Jul  7 04:00:20 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: tsl18fs120_scl_ss   Library: tsl18fs120_scl_ss
+Wire Load Model Mode: top
+
+  Startpoint: u_master/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: dbg_HRDATA[16]
+            (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/current_state_reg[1]/CP (dfcrq4)               0.00 #     0.00 r
+  u_master/current_state_reg[1]/Q (dfcrq4)                0.52       0.52 f
+  u_master/U308/ZN (inv0d2)                               0.16       0.68 r
+  u_master/U312/ZN (nr02d2)                               0.11       0.78 f
+  u_master/U313/ZN (nd12d2)                               0.31       1.09 f
+  u_master/U314/ZN (nd12d2)                               0.19       1.29 r
+  u_master/U315/Z (buffda)                                0.25       1.54 r
+  u_master/U317/ZN (invbdf)                               0.17       1.70 f
+  u_master/U318/ZN (nd02d2)                               0.12       1.82 r
+  u_master/U322/ZN (oaim211d1)                            0.18       2.00 f
+  u_master/HADDR[5] (ahb_master)                          0.00       2.00 f
+  U89/ZN (inv0d4)                                         0.20       2.20 r
+  U90/ZN (invbdf)                                         0.31       2.51 f
+  u_slave0/HADDR[5] (ahb_slave_00000000_000003ff)         0.00       2.51 f
+  u_slave0/U1572/ZN (inv0d0)                              0.73       3.23 r
+  u_slave0/U1582/ZN (nr02d2)                              0.26       3.50 f
+  u_slave0/U1588/ZN (nd02d2)                              0.55       4.05 r
+  u_slave0/U78/ZN (nr02d4)                                0.92       4.97 f
+  u_slave0/U202/Z (buffd3)                                0.85       5.82 f
+  u_slave0/U7419/ZN (aoi22d1)                             0.30       6.12 r
+  u_slave0/U1469/ZN (nd04d0)                              0.26       6.38 f
+  u_slave0/U7432/ZN (nr04d0)                              0.88       7.26 r
+  u_slave0/U7496/ZN (nd04d0)                              0.37       7.63 f
+  u_slave0/U7497/Z (mx02d1)                               0.41       8.04 f
+  u_slave0/U7498/Z (an02d0)                               0.26       8.30 f
+  u_slave0/HRDATA[16] (ahb_slave_00000000_000003ff)       0.00       8.30 f
+  u_mux/HRDATA0[16] (ahb_mux)                             0.00       8.30 f
+  u_mux/U94/ZN (aoi22d1)                                  0.19       8.49 r
+  u_mux/U96/ZN (nd02d4)                                   0.51       9.00 f
+  u_mux/HRDATA[16] (ahb_mux)                              0.00       9.00 f
+  dbg_HRDATA[16] (out)                                    0.00       9.00 f
+  data arrival time                                                  9.00
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  output external delay                                  -1.00       9.00
+  data required time                                                 9.00
+  --------------------------------------------------------------------------
+  data required time                                                 9.00
+  data arrival time                                                 -9.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_master/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: dbg_HRDATA[4]
+            (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/current_state_reg[1]/CP (dfcrq4)               0.00 #     0.00 r
+  u_master/current_state_reg[1]/Q (dfcrq4)                0.52       0.52 r
+  u_master/U308/ZN (inv0d2)                               0.09       0.61 f
+  u_master/U312/ZN (nr02d2)                               0.24       0.85 r
+  u_master/U316/ZN (nd02d7)                               0.67       1.52 f
+  u_master/U326/ZN (invbda)                               0.15       1.67 r
+  u_master/U156/ZN (invbd7)                               0.14       1.81 f
+  u_master/U824/ZN (oai222d1)                             0.51       2.31 r
+  u_master/HADDR[8] (ahb_master)                          0.00       2.31 r
+  U20/ZN (inv0d4)                                         0.17       2.48 f
+  U16/ZN (invbd7)                                         0.28       2.76 r
+  u_slave1/HADDR[8] (ahb_slave_00000400_000007ff)         0.00       2.76 r
+  u_slave1/U9393/ZN (nr02d7)                              0.48       3.24 f
+  u_slave1/U1061/ZN (nd02d4)                              0.45       3.69 r
+  u_slave1/U8714/ZN (nr02d1)                              0.36       4.05 f
+  u_slave1/U152/ZN (inv0d0)                               0.56       4.61 r
+  u_slave1/U8711/ZN (inv0d2)                              0.46       5.07 f
+  u_slave1/U8713/Z (buffd3)                               0.68       5.74 f
+  u_slave1/U9839/ZN (aoi22d1)                             0.28       6.03 r
+  u_slave1/U9843/ZN (nd04d0)                              0.30       6.33 f
+  u_slave1/U9859/ZN (nr04d0)                              0.93       7.26 r
+  u_slave1/U9860/ZN (nd04d0)                              0.35       7.60 f
+  u_slave1/U9861/Z (mx02d1)                               0.41       8.01 f
+  u_slave1/U9862/Z (an02d0)                               0.23       8.24 f
+  u_slave1/HRDATA[4] (ahb_slave_00000400_000007ff)        0.00       8.24 f
+  u_mux/HRDATA1[4] (ahb_mux)                              0.00       8.24 f
+  u_mux/U112/ZN (aoi22d1)                                 0.25       8.49 r
+  u_mux/U113/ZN (nd02d4)                                  0.51       9.00 f
+  u_mux/HRDATA[4] (ahb_mux)                               0.00       9.00 f
+  dbg_HRDATA[4] (out)                                     0.00       9.00 f
+  data arrival time                                                  9.00
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  output external delay                                  -1.00       9.00
+  data required time                                                 9.00
+  --------------------------------------------------------------------------
+  data required time                                                 9.00
+  data arrival time                                                 -9.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_master/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: dbg_HRDATA[30]
+            (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/current_state_reg[1]/CP (dfcrq4)               0.00 #     0.00 r
+  u_master/current_state_reg[1]/Q (dfcrq4)                0.52       0.52 r
+  u_master/U308/ZN (inv0d2)                               0.09       0.61 f
+  u_master/U312/ZN (nr02d2)                               0.24       0.85 r
+  u_master/U316/ZN (nd02d7)                               0.67       1.52 f
+  u_master/U326/ZN (invbda)                               0.15       1.67 r
+  u_master/U156/ZN (invbd7)                               0.14       1.81 f
+  u_master/U823/ZN (oai222d1)                             0.47       2.27 r
+  u_master/HADDR[6] (ahb_master)                          0.00       2.27 r
+  U82/Z (buffda)                                          0.65       2.93 r
+  u_slave0/HADDR[6] (ahb_slave_00000000_000003ff)         0.00       2.93 r
+  u_slave0/U1566/ZN (inv0d4)                              0.17       3.10 f
+  u_slave0/U1567/ZN (invbd4)                              0.20       3.30 r
+  u_slave0/U91/ZN (nd04d2)                                0.56       3.86 f
+  u_slave0/U1678/ZN (nr02d1)                              0.24       4.10 r
+  u_slave0/U214/Z (buffd3)                                1.06       5.16 r
+  u_slave0/U1679/Z (buffd3)                               1.34       6.50 r
+  u_slave0/U9570/ZN (aoi22d1)                             0.33       6.83 f
+  u_slave0/U9571/ZN (nd04d0)                              0.42       7.25 r
+  u_slave0/U412/ZN (nr04d0)                               0.18       7.42 f
+  u_slave0/U1514/ZN (nd04d0)                              0.31       7.74 r
+  u_slave0/U9695/Z (mx02d1)                               0.28       8.02 r
+  u_slave0/U9696/Z (an02d0)                               0.30       8.33 r
+  u_slave0/HRDATA[30] (ahb_slave_00000000_000003ff)       0.00       8.33 r
+  u_mux/HRDATA0[30] (ahb_mux)                             0.00       8.33 r
+  u_mux/U59/ZN (aoi22d1)                                  0.16       8.49 f
+  u_mux/U61/ZN (nd02d2)                                   0.50       9.00 r
+  u_mux/HRDATA[30] (ahb_mux)                              0.00       9.00 r
+  dbg_HRDATA[30] (out)                                    0.00       9.00 r
+  data arrival time                                                  9.00
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  output external delay                                  -1.00       9.00
+  data required time                                                 9.00
+  --------------------------------------------------------------------------
+  data required time                                                 9.00
+  data arrival time                                                 -9.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_master/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: dbg_HRDATA[18]
+            (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/current_state_reg[1]/CP (dfcrq4)               0.00 #     0.00 r
+  u_master/current_state_reg[1]/Q (dfcrq4)                0.52       0.52 f
+  u_master/U308/ZN (inv0d2)                               0.16       0.68 r
+  u_master/U312/ZN (nr02d2)                               0.11       0.78 f
+  u_master/U313/ZN (nd12d2)                               0.31       1.09 f
+  u_master/U314/ZN (nd12d2)                               0.19       1.29 r
+  u_master/U315/Z (buffda)                                0.25       1.54 r
+  u_master/U821/ZN (oai222d1)                             0.21       1.75 f
+  u_master/HADDR[3] (ahb_master)                          0.00       1.75 f
+  U46/Z (buffd7)                                          0.46       2.21 f
+  u_slave2/HADDR[3] (ahb_slave_00000800_00000bff)         0.00       2.21 f
+  u_slave2/U8818/ZN (inv0d1)                              0.47       2.68 r
+  u_slave2/U9732/ZN (nd03d2)                              1.03       3.70 f
+  u_slave2/U9403/ZN (nr02d0)                              0.68       4.38 r
+  u_slave2/U9745/ZN (inv0d1)                              0.28       4.66 f
+  u_slave2/U286/ZN (inv0da)                               0.89       5.54 r
+  u_slave2/U8978/Z (buffd1)                               0.97       6.52 r
+  u_slave2/U12896/ZN (aoi22d1)                            0.30       6.82 f
+  u_slave2/U12900/ZN (nd04d0)                             0.40       7.22 r
+  u_slave2/U12911/ZN (nr04d0)                             0.20       7.42 f
+  u_slave2/U12954/ZN (nd04d0)                             0.31       7.74 r
+  u_slave2/U13037/Z (mx02d1)                              0.28       8.02 r
+  u_slave2/U13038/Z (an02d0)                              0.30       8.33 r
+  u_slave2/HRDATA[18] (ahb_slave_00000800_00000bff)       0.00       8.33 r
+  u_mux/HRDATA2[18] (ahb_mux)                             0.00       8.33 r
+  u_mux/U100/ZN (aoi22d1)                                 0.19       8.51 f
+  u_mux/U9/ZN (nd02d4)                                    0.48       9.00 r
+  u_mux/HRDATA[18] (ahb_mux)                              0.00       9.00 r
+  dbg_HRDATA[18] (out)                                    0.00       9.00 r
+  data arrival time                                                  9.00
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  output external delay                                  -1.00       9.00
+  data required time                                                 9.00
+  --------------------------------------------------------------------------
+  data required time                                                 9.00
+  data arrival time                                                 -9.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_master/hburst_reg_reg[2]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: dbg_HRDATA[29]
+            (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/hburst_reg_reg[2]/CP (dfcrq4)                  0.00 #     0.00 r
+  u_master/hburst_reg_reg[2]/Q (dfcrq4)                   0.51       0.51 f
+  u_master/U306/ZN (nd12d2)                               0.20       0.70 f
+  u_master/U307/ZN (nd12d2)                               0.21       0.91 f
+  u_master/U316/ZN (nd02d7)                               0.53       1.44 r
+  u_master/U326/ZN (invbda)                               0.15       1.59 f
+  u_master/U156/ZN (invbd7)                               0.13       1.72 r
+  u_master/U823/ZN (oai222d1)                             0.28       2.00 f
+  u_master/HADDR[6] (ahb_master)                          0.00       2.00 f
+  U82/Z (buffda)                                          0.52       2.51 f
+  u_slave3/HADDR[6] (ahb_slave_00000c00_00000fff)         0.00       2.51 f
+  u_slave3/U9930/ZN (inv0d4)                              0.20       2.72 r
+  u_slave3/U9932/ZN (invbd4)                              0.19       2.91 f
+  u_slave3/U309/Z (an02d2)                                0.43       3.34 f
+  u_slave3/U772/ZN (nd02d2)                               0.49       3.83 r
+  u_slave3/U771/ZN (nr02d7)                               1.00       4.83 f
+  u_slave3/U10288/Z (bufbd3)                              0.95       5.78 f
+  u_slave3/U15226/ZN (aoi22d1)                            0.42       6.20 r
+  u_slave3/U15227/ZN (nd04d0)                             0.29       6.49 f
+  u_slave3/U15232/ZN (nr04d0)                             0.81       7.30 r
+  u_slave3/U15233/ZN (nd04d0)                             0.35       7.65 f
+  u_slave3/U15234/Z (mx02d1)                              0.41       8.06 f
+  u_slave3/U15235/Z (an02d1)                              0.25       8.31 f
+  u_slave3/HRDATA[29] (ahb_slave_00000c00_00000fff)       0.00       8.31 f
+  u_mux/HRDATA3[29] (ahb_mux)                             0.00       8.31 f
+  u_mux/U58/ZN (aoi22d1)                                  0.18       8.49 r
+  u_mux/U14/ZN (nd02d4)                                   0.51       8.99 f
+  u_mux/HRDATA[29] (ahb_mux)                              0.00       8.99 f
+  dbg_HRDATA[29] (out)                                    0.00       9.00 f
+  data arrival time                                                  9.00
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  output external delay                                  -1.00       9.00
+  data required time                                                 9.00
+  --------------------------------------------------------------------------
+  data required time                                                 9.00
+  data arrival time                                                 -9.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_master/current_state_reg[2]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: u_slave3/mem_reg[116][31]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/current_state_reg[2]/CP (dfcrq4)               0.00 #     0.00 r
+  u_master/current_state_reg[2]/Q (dfcrq4)                0.56       0.56 f
+  u_master/U319/ZN (nd12d2)                               0.20       0.77 f
+  u_master/U320/ZN (nr02d2)                               0.19       0.95 r
+  u_master/U321/ZN (inv0d4)                               0.14       1.09 f
+  u_master/U77/Z (bufbd4)                                 0.36       1.45 f
+  u_master/U58/ZN (inv0d4)                                0.50       1.95 r
+  u_master/U400/ZN (nd02d1)                               0.38       2.33 f
+  u_master/U48/ZN (oai211d2)                              0.80       3.13 r
+  u_master/HADDR[21] (ahb_master)                         0.00       3.13 r
+  u_decoder/HADDR[21] (ahb_decoder)                       0.00       3.13 r
+  u_decoder/U10/ZN (nr04d1)                               0.21       3.34 f
+  u_decoder/U11/Z (an03d1)                                0.35       3.69 f
+  u_decoder/U13/ZN (nd03d2)                               0.20       3.89 r
+  u_decoder/U5/ZN (inv0d1)                                0.10       3.99 f
+  u_decoder/U4/Z (an03d2)                                 0.48       4.48 f
+  u_decoder/HSEL3 (ahb_decoder)                           0.00       4.48 f
+  u_slave3/HSEL (ahb_slave_00000c00_00000fff)             0.00       4.48 f
+  u_slave3/U1254/ZN (nd03d1)                              0.31       4.78 r
+  u_slave3/U805/Z (or02d1)                                0.38       5.17 r
+  u_slave3/U282/ZN (nd12d1)                               0.47       5.64 r
+  u_slave3/U331/ZN (nd12d2)                               0.92       6.56 r
+  u_slave3/U9734/ZN (nr02d1)                              0.40       6.96 f
+  u_slave3/U231/ZN (inv0d0)                               0.98       7.94 r
+  u_slave3/U8818/ZN (invbd2)                              1.12       9.05 f
+  u_slave3/U562/Z (mx02d0)                                0.70       9.76 f
+  u_slave3/mem_reg[116][31]/D (dfnrq1)                    0.00       9.76 f
+  data arrival time                                                  9.76
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  u_slave3/mem_reg[116][31]/CP (dfnrq1)                   0.00      10.00 r
+  library setup time                                     -0.24       9.76
+  data required time                                                 9.76
+  --------------------------------------------------------------------------
+  data required time                                                 9.76
+  data arrival time                                                 -9.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_master/current_state_reg[2]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: u_slave3/mem_reg[116][1]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/current_state_reg[2]/CP (dfcrq4)               0.00 #     0.00 r
+  u_master/current_state_reg[2]/Q (dfcrq4)                0.56       0.56 f
+  u_master/U319/ZN (nd12d2)                               0.20       0.77 f
+  u_master/U320/ZN (nr02d2)                               0.19       0.95 r
+  u_master/U321/ZN (inv0d4)                               0.14       1.09 f
+  u_master/U77/Z (bufbd4)                                 0.36       1.45 f
+  u_master/U58/ZN (inv0d4)                                0.50       1.95 r
+  u_master/U400/ZN (nd02d1)                               0.38       2.33 f
+  u_master/U48/ZN (oai211d2)                              0.80       3.13 r
+  u_master/HADDR[21] (ahb_master)                         0.00       3.13 r
+  u_decoder/HADDR[21] (ahb_decoder)                       0.00       3.13 r
+  u_decoder/U10/ZN (nr04d1)                               0.21       3.34 f
+  u_decoder/U11/Z (an03d1)                                0.35       3.69 f
+  u_decoder/U13/ZN (nd03d2)                               0.20       3.89 r
+  u_decoder/U5/ZN (inv0d1)                                0.10       3.99 f
+  u_decoder/U4/Z (an03d2)                                 0.48       4.48 f
+  u_decoder/HSEL3 (ahb_decoder)                           0.00       4.48 f
+  u_slave3/HSEL (ahb_slave_00000c00_00000fff)             0.00       4.48 f
+  u_slave3/U1254/ZN (nd03d1)                              0.31       4.78 r
+  u_slave3/U805/Z (or02d1)                                0.38       5.17 r
+  u_slave3/U282/ZN (nd12d1)                               0.47       5.64 r
+  u_slave3/U331/ZN (nd12d2)                               0.92       6.56 r
+  u_slave3/U9734/ZN (nr02d1)                              0.40       6.96 f
+  u_slave3/U231/ZN (inv0d0)                               0.98       7.94 r
+  u_slave3/U8818/ZN (invbd2)                              1.12       9.05 f
+  u_slave3/U560/Z (mx02d0)                                0.70       9.76 f
+  u_slave3/mem_reg[116][1]/D (dfnrq1)                     0.00       9.76 f
+  data arrival time                                                  9.76
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  u_slave3/mem_reg[116][1]/CP (dfnrq1)                    0.00      10.00 r
+  library setup time                                     -0.24       9.76
+  data required time                                                 9.76
+  --------------------------------------------------------------------------
+  data required time                                                 9.76
+  data arrival time                                                 -9.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: u_master/current_state_reg[2]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: u_slave3/mem_reg[86][31]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/current_state_reg[2]/CP (dfcrq4)               0.00 #     0.00 r
+  u_master/current_state_reg[2]/Q (dfcrq4)                0.56       0.56 f
+  u_master/U319/ZN (nd12d2)                               0.20       0.77 f
+  u_master/U320/ZN (nr02d2)                               0.19       0.95 r
+  u_master/U321/ZN (inv0d4)                               0.14       1.09 f
+  u_master/U77/Z (bufbd4)                                 0.36       1.45 f
+  u_master/U58/ZN (inv0d4)                                0.50       1.95 r
+  u_master/U400/ZN (nd02d1)                               0.38       2.33 f
+  u_master/U48/ZN (oai211d2)                              0.80       3.13 r
+  u_master/HADDR[21] (ahb_master)                         0.00       3.13 r
+  u_decoder/HADDR[21] (ahb_decoder)                       0.00       3.13 r
+  u_decoder/U10/ZN (nr04d1)                               0.21       3.34 f
+  u_decoder/U11/Z (an03d1)                                0.35       3.69 f
+  u_decoder/U13/ZN (nd03d2)                               0.20       3.89 r
+  u_decoder/U5/ZN (inv0d1)                                0.10       3.99 f
+  u_decoder/U4/Z (an03d2)                                 0.48       4.48 f
+  u_decoder/HSEL3 (ahb_decoder)                           0.00       4.48 f
+  u_slave3/HSEL (ahb_slave_00000c00_00000fff)             0.00       4.48 f
+  u_slave3/U1254/ZN (nd03d1)                              0.31       4.78 r
+  u_slave3/U805/Z (or02d1)                                0.38       5.17 r
+  u_slave3/U282/ZN (nd12d1)                               0.47       5.64 r
+  u_slave3/U269/ZN (nd12d2)                               0.91       6.55 r
+  u_slave3/U9738/ZN (nr02d1)                              0.40       6.96 f
+  u_slave3/U230/ZN (inv0d0)                               0.98       7.94 r
+  u_slave3/U8721/ZN (invbd2)                              1.12       9.05 f
+  u_slave3/U619/Z (mx02d0)                                0.70       9.75 f
+  u_slave3/mem_reg[86][31]/D (dfnrq1)                     0.00       9.75 f
+  data arrival time                                                  9.75
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  u_slave3/mem_reg[86][31]/CP (dfnrq1)                    0.00      10.00 r
+  library setup time                                     -0.24       9.76
+  data required time                                                 9.76
+  --------------------------------------------------------------------------
+  data required time                                                 9.76
+  data arrival time                                                 -9.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: u_master/current_state_reg[2]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: u_slave3/mem_reg[86][1]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/current_state_reg[2]/CP (dfcrq4)               0.00 #     0.00 r
+  u_master/current_state_reg[2]/Q (dfcrq4)                0.56       0.56 f
+  u_master/U319/ZN (nd12d2)                               0.20       0.77 f
+  u_master/U320/ZN (nr02d2)                               0.19       0.95 r
+  u_master/U321/ZN (inv0d4)                               0.14       1.09 f
+  u_master/U77/Z (bufbd4)                                 0.36       1.45 f
+  u_master/U58/ZN (inv0d4)                                0.50       1.95 r
+  u_master/U400/ZN (nd02d1)                               0.38       2.33 f
+  u_master/U48/ZN (oai211d2)                              0.80       3.13 r
+  u_master/HADDR[21] (ahb_master)                         0.00       3.13 r
+  u_decoder/HADDR[21] (ahb_decoder)                       0.00       3.13 r
+  u_decoder/U10/ZN (nr04d1)                               0.21       3.34 f
+  u_decoder/U11/Z (an03d1)                                0.35       3.69 f
+  u_decoder/U13/ZN (nd03d2)                               0.20       3.89 r
+  u_decoder/U5/ZN (inv0d1)                                0.10       3.99 f
+  u_decoder/U4/Z (an03d2)                                 0.48       4.48 f
+  u_decoder/HSEL3 (ahb_decoder)                           0.00       4.48 f
+  u_slave3/HSEL (ahb_slave_00000c00_00000fff)             0.00       4.48 f
+  u_slave3/U1254/ZN (nd03d1)                              0.31       4.78 r
+  u_slave3/U805/Z (or02d1)                                0.38       5.17 r
+  u_slave3/U282/ZN (nd12d1)                               0.47       5.64 r
+  u_slave3/U269/ZN (nd12d2)                               0.91       6.55 r
+  u_slave3/U9738/ZN (nr02d1)                              0.40       6.96 f
+  u_slave3/U230/ZN (inv0d0)                               0.98       7.94 r
+  u_slave3/U8721/ZN (invbd2)                              1.12       9.05 f
+  u_slave3/U617/Z (mx02d0)                                0.70       9.75 f
+  u_slave3/mem_reg[86][1]/D (dfnrq1)                      0.00       9.75 f
+  data arrival time                                                  9.75
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  u_slave3/mem_reg[86][1]/CP (dfnrq1)                     0.00      10.00 r
+  library setup time                                     -0.24       9.76
+  data required time                                                 9.76
+  --------------------------------------------------------------------------
+  data required time                                                 9.76
+  data arrival time                                                 -9.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: u_master/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: dbg_HRDATA[6]
+            (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/current_state_reg[1]/CP (dfcrq4)               0.00 #     0.00 r
+  u_master/current_state_reg[1]/Q (dfcrq4)                0.52       0.52 r
+  u_master/U308/ZN (inv0d2)                               0.09       0.61 f
+  u_master/U312/ZN (nr02d2)                               0.24       0.85 r
+  u_master/U316/ZN (nd02d7)                               0.67       1.52 f
+  u_master/U326/ZN (invbda)                               0.15       1.67 r
+  u_master/U156/ZN (invbd7)                               0.14       1.81 f
+  u_master/U824/ZN (oai222d1)                             0.51       2.31 r
+  u_master/HADDR[8] (ahb_master)                          0.00       2.31 r
+  U20/ZN (inv0d4)                                         0.17       2.48 f
+  U16/ZN (invbd7)                                         0.28       2.76 r
+  u_slave1/HADDR[8] (ahb_slave_00000400_000007ff)         0.00       2.76 r
+  u_slave1/U9393/ZN (nr02d7)                              0.48       3.24 f
+  u_slave1/U1061/ZN (nd02d4)                              0.45       3.69 r
+  u_slave1/U8714/ZN (nr02d1)                              0.36       4.05 f
+  u_slave1/U152/ZN (inv0d0)                               0.56       4.61 r
+  u_slave1/U8711/ZN (inv0d2)                              0.46       5.07 f
+  u_slave1/U8713/Z (buffd3)                               0.68       5.74 f
+  u_slave1/U10966/ZN (aoi22d1)                            0.28       6.03 r
+  u_slave1/U10970/ZN (nd04d0)                             0.30       6.33 f
+  u_slave1/U10986/ZN (nr04d0)                             0.93       7.26 r
+  u_slave1/U1096/ZN (nd04d0)                              0.35       7.60 f
+  u_slave1/U10987/Z (mx02d1)                              0.40       8.01 f
+  u_slave1/U10988/Z (an02d0)                              0.23       8.24 f
+  u_slave1/HRDATA[6] (ahb_slave_00000400_000007ff)        0.00       8.24 f
+  u_mux/HRDATA1[6] (ahb_mux)                              0.00       8.24 f
+  u_mux/U87/ZN (aoi22d1)                                  0.25       8.49 r
+  u_mux/U10/ZN (nd02d4)                                   0.51       8.99 f
+  u_mux/HRDATA[6] (ahb_mux)                               0.00       8.99 f
+  dbg_HRDATA[6] (out)                                     0.00       8.99 f
+  data arrival time                                                  8.99
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  output external delay                                  -1.00       9.00
+  data required time                                                 9.00
+  --------------------------------------------------------------------------
+  data required time                                                 9.00
+  data arrival time                                                 -8.99
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: u_master/hburst_reg_reg[2]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: dbg_HRDATA[25]
+            (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/hburst_reg_reg[2]/CP (dfcrq4)                  0.00 #     0.00 r
+  u_master/hburst_reg_reg[2]/Q (dfcrq4)                   0.51       0.51 f
+  u_master/U306/ZN (nd12d2)                               0.20       0.70 f
+  u_master/U307/ZN (nd12d2)                               0.21       0.91 f
+  u_master/U316/ZN (nd02d7)                               0.53       1.44 r
+  u_master/U326/ZN (invbda)                               0.15       1.59 f
+  u_master/U156/ZN (invbd7)                               0.13       1.72 r
+  u_master/U823/ZN (oai222d1)                             0.28       2.00 f
+  u_master/HADDR[6] (ahb_master)                          0.00       2.00 f
+  U82/Z (buffda)                                          0.52       2.51 f
+  u_slave3/HADDR[6] (ahb_slave_00000c00_00000fff)         0.00       2.51 f
+  u_slave3/U9930/ZN (inv0d4)                              0.20       2.72 r
+  u_slave3/U9932/ZN (invbd4)                              0.19       2.91 f
+  u_slave3/U309/Z (an02d2)                                0.43       3.34 f
+  u_slave3/U772/ZN (nd02d2)                               0.49       3.83 r
+  u_slave3/U771/ZN (nr02d7)                               1.00       4.83 f
+  u_slave3/U10288/Z (bufbd3)                              0.95       5.78 f
+  u_slave3/U10374/ZN (aoi22d1)                            0.42       6.20 r
+  u_slave3/U10375/ZN (nd04d0)                             0.29       6.49 f
+  u_slave3/U10380/ZN (nr04d0)                             0.81       7.30 r
+  u_slave3/U10381/ZN (nd04d0)                             0.35       7.65 f
+  u_slave3/U10382/Z (mx02d1)                              0.40       8.05 f
+  u_slave3/U10383/Z (an02d1)                              0.25       8.31 f
+  u_slave3/HRDATA[25] (ahb_slave_00000c00_00000fff)       0.00       8.31 f
+  u_mux/HRDATA3[25] (ahb_mux)                             0.00       8.31 f
+  u_mux/U69/ZN (aoi22d1)                                  0.19       8.50 r
+  u_mux/U15/ZN (nd02d7)                                   0.50       8.99 f
+  u_mux/HRDATA[25] (ahb_mux)                              0.00       8.99 f
+  dbg_HRDATA[25] (out)                                    0.00       8.99 f
+  data arrival time                                                  8.99
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  output external delay                                  -1.00       9.00
+  data required time                                                 9.00
+  --------------------------------------------------------------------------
+  data required time                                                 9.00
+  data arrival time                                                 -8.99
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: u_master/hburst_reg_reg[2]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: dbg_HRDATA[17]
+            (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/hburst_reg_reg[2]/CP (dfcrq4)                  0.00 #     0.00 r
+  u_master/hburst_reg_reg[2]/Q (dfcrq4)                   0.51       0.51 f
+  u_master/U306/ZN (nd12d2)                               0.20       0.70 f
+  u_master/U307/ZN (nd12d2)                               0.21       0.91 f
+  u_master/U316/ZN (nd02d7)                               0.53       1.44 r
+  u_master/U326/ZN (invbda)                               0.15       1.59 f
+  u_master/U156/ZN (invbd7)                               0.13       1.72 r
+  u_master/U823/ZN (oai222d1)                             0.28       2.00 f
+  u_master/HADDR[6] (ahb_master)                          0.00       2.00 f
+  U82/Z (buffda)                                          0.52       2.51 f
+  u_slave3/HADDR[6] (ahb_slave_00000c00_00000fff)         0.00       2.51 f
+  u_slave3/U9930/ZN (inv0d4)                              0.20       2.72 r
+  u_slave3/U9932/ZN (invbd4)                              0.19       2.91 f
+  u_slave3/U309/Z (an02d2)                                0.43       3.34 f
+  u_slave3/U772/ZN (nd02d2)                               0.49       3.83 r
+  u_slave3/U771/ZN (nr02d7)                               1.00       4.83 f
+  u_slave3/U10288/Z (bufbd3)                              0.95       5.78 f
+  u_slave3/U13389/ZN (aoi22d1)                            0.42       6.20 r
+  u_slave3/U13390/ZN (nd04d0)                             0.29       6.49 f
+  u_slave3/U13396/ZN (nr04d0)                             0.81       7.30 r
+  u_slave3/U13397/ZN (nd04d0)                             0.35       7.65 f
+  u_slave3/U13398/Z (mx02d1)                              0.40       8.05 f
+  u_slave3/U13399/Z (an02d1)                              0.25       8.31 f
+  u_slave3/HRDATA[17] (ahb_slave_00000c00_00000fff)       0.00       8.31 f
+  u_mux/HRDATA3[17] (ahb_mux)                             0.00       8.31 f
+  u_mux/U98/ZN (aoi22d1)                                  0.19       8.50 r
+  u_mux/U99/ZN (nd02d7)                                   0.50       8.99 f
+  u_mux/HRDATA[17] (ahb_mux)                              0.00       8.99 f
+  dbg_HRDATA[17] (out)                                    0.00       8.99 f
+  data arrival time                                                  8.99
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  output external delay                                  -1.00       9.00
+  data required time                                                 9.00
+  --------------------------------------------------------------------------
+  data required time                                                 9.00
+  data arrival time                                                 -8.99
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: u_master/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: dbg_HRDATA[14]
+            (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/current_state_reg[1]/CP (dfcrq4)               0.00 #     0.00 r
+  u_master/current_state_reg[1]/Q (dfcrq4)                0.52       0.52 r
+  u_master/U308/ZN (inv0d2)                               0.09       0.61 f
+  u_master/U312/ZN (nr02d2)                               0.24       0.85 r
+  u_master/U316/ZN (nd02d7)                               0.67       1.52 f
+  u_master/U326/ZN (invbda)                               0.15       1.67 r
+  u_master/U156/ZN (invbd7)                               0.14       1.81 f
+  u_master/U823/ZN (oai222d1)                             0.47       2.27 r
+  u_master/HADDR[6] (ahb_master)                          0.00       2.27 r
+  U82/Z (buffda)                                          0.65       2.93 r
+  u_slave1/HADDR[6] (ahb_slave_00000400_000007ff)         0.00       2.93 r
+  u_slave1/U1065/Z (an02d4)                               0.46       3.38 r
+  u_slave1/U666/ZN (nd03d4)                               0.53       3.92 f
+  u_slave1/U8464/ZN (nr02d4)                              1.60       5.51 r
+  u_slave1/U8465/Z (buffd3)                               0.98       6.49 r
+  u_slave1/U12076/ZN (aoi22d1)                            0.30       6.79 f
+  u_slave1/U12077/ZN (nd04d0)                             0.39       7.18 r
+  u_slave1/U12083/ZN (nr04d0)                             0.19       7.37 f
+  u_slave1/U12084/ZN (nd04d0)                             0.38       7.75 r
+  u_slave1/U12169/Z (mx02d1)                              0.28       8.04 r
+  u_slave1/U12170/Z (an02d0)                              0.30       8.34 r
+  u_slave1/HRDATA[14] (ahb_slave_00000400_000007ff)       0.00       8.34 r
+  u_mux/HRDATA1[14] (ahb_mux)                             0.00       8.34 r
+  u_mux/U56/ZN (aoi22d1)                                  0.18       8.52 f
+  u_mux/U20/ZN (nd02d4)                                   0.48       8.99 r
+  u_mux/HRDATA[14] (ahb_mux)                              0.00       8.99 r
+  dbg_HRDATA[14] (out)                                    0.00       8.99 r
+  data arrival time                                                  8.99
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  output external delay                                  -1.00       9.00
+  data required time                                                 9.00
+  --------------------------------------------------------------------------
+  data required time                                                 9.00
+  data arrival time                                                 -8.99
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: u_master/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: dbg_HRDATA[12]
+            (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/current_state_reg[1]/CP (dfcrq4)               0.00 #     0.00 r
+  u_master/current_state_reg[1]/Q (dfcrq4)                0.52       0.52 r
+  u_master/U308/ZN (inv0d2)                               0.09       0.61 f
+  u_master/U312/ZN (nr02d2)                               0.24       0.85 r
+  u_master/U316/ZN (nd02d7)                               0.67       1.52 f
+  u_master/U326/ZN (invbda)                               0.15       1.67 r
+  u_master/U156/ZN (invbd7)                               0.14       1.81 f
+  u_master/U823/ZN (oai222d1)                             0.47       2.27 r
+  u_master/HADDR[6] (ahb_master)                          0.00       2.27 r
+  U82/Z (buffda)                                          0.65       2.93 r
+  u_slave1/HADDR[6] (ahb_slave_00000400_000007ff)         0.00       2.93 r
+  u_slave1/U1065/Z (an02d4)                               0.46       3.38 r
+  u_slave1/U666/ZN (nd03d4)                               0.53       3.92 f
+  u_slave1/U8464/ZN (nr02d4)                              1.60       5.51 r
+  u_slave1/U8465/Z (buffd3)                               0.98       6.49 r
+  u_slave1/U11740/ZN (aoi22d1)                            0.30       6.79 f
+  u_slave1/U11741/ZN (nd04d0)                             0.39       7.18 r
+  u_slave1/U11747/ZN (nr04d0)                             0.19       7.37 f
+  u_slave1/U11748/ZN (nd04d0)                             0.38       7.75 r
+  u_slave1/U11831/Z (mx02d1)                              0.28       8.04 r
+  u_slave1/U11832/Z (an02d0)                              0.30       8.34 r
+  u_slave1/HRDATA[12] (ahb_slave_00000400_000007ff)       0.00       8.34 r
+  u_mux/HRDATA1[12] (ahb_mux)                             0.00       8.34 r
+  u_mux/U50/ZN (aoi22d1)                                  0.18       8.52 f
+  u_mux/U18/ZN (nd02d4)                                   0.48       8.99 r
+  u_mux/HRDATA[12] (ahb_mux)                              0.00       8.99 r
+  dbg_HRDATA[12] (out)                                    0.00       8.99 r
+  data arrival time                                                  8.99
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  output external delay                                  -1.00       9.00
+  data required time                                                 9.00
+  --------------------------------------------------------------------------
+  data required time                                                 9.00
+  data arrival time                                                 -8.99
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: u_master/hburst_reg_reg[2]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: dbg_HRDATA[31]
+            (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/hburst_reg_reg[2]/CP (dfcrq4)                  0.00 #     0.00 r
+  u_master/hburst_reg_reg[2]/Q (dfcrq4)                   0.51       0.51 f
+  u_master/U306/ZN (nd12d2)                               0.20       0.70 f
+  u_master/U307/ZN (nd12d2)                               0.21       0.91 f
+  u_master/U316/ZN (nd02d7)                               0.53       1.44 r
+  u_master/U326/ZN (invbda)                               0.15       1.59 f
+  u_master/U156/ZN (invbd7)                               0.13       1.72 r
+  u_master/U823/ZN (oai222d1)                             0.28       2.00 f
+  u_master/HADDR[6] (ahb_master)                          0.00       2.00 f
+  U82/Z (buffda)                                          0.52       2.51 f
+  u_slave3/HADDR[6] (ahb_slave_00000c00_00000fff)         0.00       2.51 f
+  u_slave3/U9930/ZN (inv0d4)                              0.20       2.72 r
+  u_slave3/U9932/ZN (invbd4)                              0.19       2.91 f
+  u_slave3/U309/Z (an02d2)                                0.43       3.34 f
+  u_slave3/U772/ZN (nd02d2)                               0.49       3.83 r
+  u_slave3/U771/ZN (nr02d7)                               1.00       4.83 f
+  u_slave3/U10288/Z (bufbd3)                              0.95       5.78 f
+  u_slave3/U15556/ZN (aoi22d1)                            0.42       6.20 r
+  u_slave3/U15557/ZN (nd04d0)                             0.29       6.49 f
+  u_slave3/U15563/ZN (nr04d0)                             0.81       7.30 r
+  u_slave3/U15564/ZN (nd04d0)                             0.35       7.65 f
+  u_slave3/U15565/Z (mx02d1)                              0.40       8.05 f
+  u_slave3/U15566/Z (an02d1)                              0.25       8.31 f
+  u_slave3/HRDATA[31] (ahb_slave_00000c00_00000fff)       0.00       8.31 f
+  u_mux/HRDATA3[31] (ahb_mux)                             0.00       8.31 f
+  u_mux/U77/ZN (aoi22d1)                                  0.18       8.48 r
+  u_mux/U5/ZN (nd02d4)                                    0.51       8.99 f
+  u_mux/HRDATA[31] (ahb_mux)                              0.00       8.99 f
+  dbg_HRDATA[31] (out)                                    0.00       8.99 f
+  data arrival time                                                  8.99
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  output external delay                                  -1.00       9.00
+  data required time                                                 9.00
+  --------------------------------------------------------------------------
+  data required time                                                 9.00
+  data arrival time                                                 -8.99
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: u_master/hburst_reg_reg[2]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: dbg_HRDATA[19]
+            (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/hburst_reg_reg[2]/CP (dfcrq4)                  0.00 #     0.00 r
+  u_master/hburst_reg_reg[2]/Q (dfcrq4)                   0.51       0.51 f
+  u_master/U306/ZN (nd12d2)                               0.20       0.70 f
+  u_master/U307/ZN (nd12d2)                               0.21       0.91 f
+  u_master/U316/ZN (nd02d7)                               0.53       1.44 r
+  u_master/U326/ZN (invbda)                               0.15       1.59 f
+  u_master/U156/ZN (invbd7)                               0.13       1.72 r
+  u_master/U823/ZN (oai222d1)                             0.28       2.00 f
+  u_master/HADDR[6] (ahb_master)                          0.00       2.00 f
+  U82/Z (buffda)                                          0.52       2.51 f
+  u_slave3/HADDR[6] (ahb_slave_00000c00_00000fff)         0.00       2.51 f
+  u_slave3/U9930/ZN (inv0d4)                              0.20       2.72 r
+  u_slave3/U9932/ZN (invbd4)                              0.19       2.91 f
+  u_slave3/U309/Z (an02d2)                                0.43       3.34 f
+  u_slave3/U772/ZN (nd02d2)                               0.49       3.83 r
+  u_slave3/U771/ZN (nr02d7)                               1.00       4.83 f
+  u_slave3/U10288/Z (bufbd3)                              0.95       5.78 f
+  u_slave3/U13725/ZN (aoi22d1)                            0.42       6.20 r
+  u_slave3/U13726/ZN (nd04d0)                             0.29       6.49 f
+  u_slave3/U13732/ZN (nr04d0)                             0.81       7.30 r
+  u_slave3/U13733/ZN (nd04d0)                             0.35       7.65 f
+  u_slave3/U13734/Z (mx02d1)                              0.40       8.05 f
+  u_slave3/U13735/Z (an02d1)                              0.25       8.31 f
+  u_slave3/HRDATA[19] (ahb_slave_00000c00_00000fff)       0.00       8.31 f
+  u_mux/HRDATA3[19] (ahb_mux)                             0.00       8.31 f
+  u_mux/U103/ZN (aoi22d1)                                 0.18       8.48 r
+  u_mux/U8/ZN (nd02d4)                                    0.51       8.99 f
+  u_mux/HRDATA[19] (ahb_mux)                              0.00       8.99 f
+  dbg_HRDATA[19] (out)                                    0.00       8.99 f
+  data arrival time                                                  8.99
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  output external delay                                  -1.00       9.00
+  data required time                                                 9.00
+  --------------------------------------------------------------------------
+  data required time                                                 9.00
+  data arrival time                                                 -8.99
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: u_master/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: dbg_HRDATA[5]
+            (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/current_state_reg[1]/CP (dfcrq4)               0.00 #     0.00 r
+  u_master/current_state_reg[1]/Q (dfcrq4)                0.52       0.52 r
+  u_master/U308/ZN (inv0d2)                               0.09       0.61 f
+  u_master/U312/ZN (nr02d2)                               0.24       0.85 r
+  u_master/U316/ZN (nd02d7)                               0.67       1.52 f
+  u_master/U326/ZN (invbda)                               0.15       1.67 r
+  u_master/U156/ZN (invbd7)                               0.14       1.81 f
+  u_master/U824/ZN (oai222d1)                             0.51       2.31 r
+  u_master/HADDR[8] (ahb_master)                          0.00       2.31 r
+  U20/ZN (inv0d4)                                         0.17       2.48 f
+  U16/ZN (invbd7)                                         0.28       2.76 r
+  u_slave1/HADDR[8] (ahb_slave_00000400_000007ff)         0.00       2.76 r
+  u_slave1/U1072/ZN (nd12d1)                              0.19       2.95 f
+  u_slave1/U8513/ZN (invbd2)                              0.33       3.28 r
+  u_slave1/U9420/ZN (nd03d4)                              0.58       3.86 f
+  u_slave1/U145/ZN (nr02d4)                               1.78       5.63 r
+  u_slave1/U132/Z (buffd3)                                0.84       6.47 r
+  u_slave1/U10734/ZN (aoi22d1)                            0.28       6.75 f
+  u_slave1/U10736/ZN (nd04d0)                             0.36       7.11 r
+  u_slave1/U10737/ZN (nr04d0)                             0.18       7.29 f
+  u_slave1/U10738/ZN (nd04d0)                             0.38       7.67 r
+  u_slave1/U10822/Z (mx02d1)                              0.28       7.96 r
+  u_slave1/U10823/Z (an02d0)                              0.30       8.26 r
+  u_slave1/HRDATA[5] (ahb_slave_00000400_000007ff)        0.00       8.26 r
+  u_mux/HRDATA1[5] (ahb_mux)                              0.00       8.26 r
+  u_mux/U84/ZN (aoi22d1)                                  0.20       8.46 f
+  u_mux/U85/ZN (nd02d2)                                   0.53       8.99 r
+  u_mux/HRDATA[5] (ahb_mux)                               0.00       8.99 r
+  dbg_HRDATA[5] (out)                                     0.00       8.99 r
+  data arrival time                                                  8.99
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  output external delay                                  -1.00       9.00
+  data required time                                                 9.00
+  --------------------------------------------------------------------------
+  data required time                                                 9.00
+  data arrival time                                                 -8.99
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: u_master/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: dbg_HRDATA[0]
+            (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/current_state_reg[1]/CP (dfcrq4)               0.00 #     0.00 r
+  u_master/current_state_reg[1]/Q (dfcrq4)                0.52       0.52 r
+  u_master/U308/ZN (inv0d2)                               0.09       0.61 f
+  u_master/U312/ZN (nr02d2)                               0.24       0.85 r
+  u_master/U316/ZN (nd02d7)                               0.67       1.52 f
+  u_master/U326/ZN (invbda)                               0.15       1.67 r
+  u_master/U156/ZN (invbd7)                               0.14       1.81 f
+  u_master/U824/ZN (oai222d1)                             0.51       2.31 r
+  u_master/HADDR[8] (ahb_master)                          0.00       2.31 r
+  U20/ZN (inv0d4)                                         0.17       2.48 f
+  U16/ZN (invbd7)                                         0.28       2.76 r
+  u_slave1/HADDR[8] (ahb_slave_00000400_000007ff)         0.00       2.76 r
+  u_slave1/U1072/ZN (nd12d1)                              0.19       2.95 f
+  u_slave1/U8513/ZN (invbd2)                              0.33       3.28 r
+  u_slave1/U9420/ZN (nd03d4)                              0.58       3.86 f
+  u_slave1/U145/ZN (nr02d4)                               1.78       5.63 r
+  u_slave1/U123/Z (buffd3)                                0.84       6.47 r
+  u_slave1/U10039/ZN (aoi22d1)                            0.28       6.75 f
+  u_slave1/U10041/ZN (nd04d0)                             0.36       7.11 r
+  u_slave1/U10042/ZN (nr04d0)                             0.18       7.29 f
+  u_slave1/U10043/ZN (nd04d0)                             0.38       7.67 r
+  u_slave1/U10130/Z (mx02d1)                              0.28       7.96 r
+  u_slave1/U10131/Z (an02d0)                              0.30       8.26 r
+  u_slave1/HRDATA[0] (ahb_slave_00000400_000007ff)        0.00       8.26 r
+  u_mux/HRDATA1[0] (ahb_mux)                              0.00       8.26 r
+  u_mux/U33/ZN (aoi22d1)                                  0.20       8.46 f
+  u_mux/U34/ZN (nd02d2)                                   0.53       8.99 r
+  u_mux/HRDATA[0] (ahb_mux)                               0.00       8.99 r
+  dbg_HRDATA[0] (out)                                     0.00       8.99 r
+  data arrival time                                                  8.99
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  output external delay                                  -1.00       9.00
+  data required time                                                 9.00
+  --------------------------------------------------------------------------
+  data required time                                                 9.00
+  data arrival time                                                 -8.99
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: in_HADDR[3]
+              (input port clocked by HCLK)
+  Endpoint: u_master/burst_addr_reg[30]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.00       1.00 r
+  in_HADDR[3] (in)                                        0.00       1.00 r
+  u_master/in_HADDR[3] (ahb_master)                       0.00       1.00 r
+  u_master/U628/ZN (nd02d1)                               0.22       1.22 f
+  u_master/U629/ZN (nd12d1)                               0.35       1.57 f
+  u_master/U290/ZN (nd12d0)                               0.50       2.07 f
+  u_master/U632/ZN (nd12d1)                               0.40       2.47 f
+  u_master/U634/ZN (nd12d2)                               0.29       2.76 f
+  u_master/U636/ZN (nr02d2)                               0.43       3.18 r
+  u_master/U637/ZN (nd03d1)                               0.33       3.51 f
+  u_master/U639/ZN (nd12d2)                               0.31       3.82 f
+  u_master/U641/ZN (nd12d2)                               0.25       4.07 f
+  u_master/U643/ZN (nd12d2)                               0.25       4.32 f
+  u_master/U645/ZN (nd12d1)                               0.32       4.64 f
+  u_master/U647/ZN (nr02d1)                               0.63       5.27 r
+  u_master/U648/ZN (inv0d0)                               0.41       5.68 f
+  u_master/U287/ZN (nr02d1)                               0.78       6.46 r
+  u_master/U650/Z (an03d0)                                0.71       7.17 r
+  u_master/U651/ZN (inv0d0)                               0.37       7.54 f
+  u_master/U653/ZN (nr02d0)                               0.84       8.38 r
+  u_master/U661/ZN (inv0d0)                               0.27       8.65 f
+  u_master/U662/ZN (nr03d0)                               0.77       9.42 r
+  u_master/U664/ZN (aoi211d1)                             0.16       9.57 f
+  u_master/U666/ZN (oai211d1)                             0.22       9.79 r
+  u_master/burst_addr_reg[30]/D (dfcrq1)                  0.00       9.79 r
+  data arrival time                                                  9.79
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  u_master/burst_addr_reg[30]/CP (dfcrq1)                 0.00      10.00 r
+  library setup time                                     -0.20       9.80
+  data required time                                                 9.80
+  --------------------------------------------------------------------------
+  data required time                                                 9.80
+  data arrival time                                                 -9.79
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: u_master/hburst_reg_reg[2]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: dbg_HRDATA[10]
+            (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/hburst_reg_reg[2]/CP (dfcrq4)                  0.00 #     0.00 r
+  u_master/hburst_reg_reg[2]/Q (dfcrq4)                   0.51       0.51 f
+  u_master/U306/ZN (nd12d2)                               0.20       0.70 f
+  u_master/U307/ZN (nd12d2)                               0.21       0.91 f
+  u_master/U316/ZN (nd02d7)                               0.53       1.44 r
+  u_master/U326/ZN (invbda)                               0.15       1.59 f
+  u_master/U156/ZN (invbd7)                               0.13       1.72 r
+  u_master/U823/ZN (oai222d1)                             0.28       2.00 f
+  u_master/HADDR[6] (ahb_master)                          0.00       2.00 f
+  U82/Z (buffda)                                          0.52       2.51 f
+  u_slave3/HADDR[6] (ahb_slave_00000c00_00000fff)         0.00       2.51 f
+  u_slave3/U9930/ZN (inv0d4)                              0.20       2.72 r
+  u_slave3/U9932/ZN (invbd4)                              0.19       2.91 f
+  u_slave3/U309/Z (an02d2)                                0.43       3.34 f
+  u_slave3/U1327/ZN (nd03d4)                              0.54       3.88 r
+  u_slave3/U1246/Z (or02d1)                               0.34       4.22 r
+  u_slave3/U1245/ZN (invbd4)                              0.52       4.74 f
+  u_slave3/U12632/Z (buffd3)                              0.96       5.69 f
+  u_slave3/U12130/ZN (aoi22d1)                            0.36       6.06 r
+  u_slave3/U12131/ZN (nd04d0)                             0.29       6.34 f
+  u_slave3/U1368/ZN (nr04d0)                              0.92       7.27 r
+  u_slave3/U1227/ZN (nd04d0)                              0.37       7.64 f
+  u_slave3/U12209/Z (mx02d1)                              0.40       8.04 f
+  u_slave3/U1545/Z (an02d0)                               0.26       8.30 f
+  u_slave3/HRDATA[10] (ahb_slave_00000c00_00000fff)       0.00       8.30 f
+  u_mux/HRDATA3[10] (ahb_mux)                             0.00       8.30 f
+  u_mux/U45/ZN (aoi22d1)                                  0.19       8.48 r
+  u_mux/U6/ZN (nd02d4)                                    0.51       8.99 f
+  u_mux/HRDATA[10] (ahb_mux)                              0.00       8.99 f
+  dbg_HRDATA[10] (out)                                    0.00       8.99 f
+  data arrival time                                                  8.99
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  output external delay                                  -1.00       9.00
+  data required time                                                 9.00
+  --------------------------------------------------------------------------
+  data required time                                                 9.00
+  data arrival time                                                 -8.99
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1

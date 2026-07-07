@@ -1,0 +1,86 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'ahb_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : qor
+Design : ahb_top
+Version: T-2022.03-SP5
+Date   : Tue Jul  7 04:00:18 2026
+****************************************
+
+
+  Timing Path Group 'HCLK'
+  -----------------------------------
+  Levels of Logic:              23.00
+  Critical Path Length:          9.00
+  Critical Path Slack:           0.00
+  Critical Path Clk Period:     10.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          7
+  Hierarchical Port Count:        851
+  Leaf Cell Count:              95170
+  Buf/Inv Cell Count:            4840
+  Buf Cell Count:                3763
+  Inv Cell Count:                1127
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:     62262
+  Sequential Cell Count:        32908
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:  1360971.192218
+  Noncombinational Area:
+                       1961606.850082
+  Buf/Inv Area:          78211.600951
+  Total Buffer Area:         60726.59
+  Total Inverter Area:       20778.01
+  Macro/Black Box Area:      0.000000
+  Net Area:             219072.477867
+  -----------------------------------
+  Cell Area:           3322578.042300
+  Design Area:         3541650.520167
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:         95344
+  Nets With Violations:            28
+  Max Trans Violations:             1
+  Max Cap Violations:              27
+  -----------------------------------
+
+
+  Hostname: smdp-c2sd-021.thapar.edu
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                   28.68
+  Logic Optimization:                 51.47
+  Mapping Optimization:              139.23
+  -----------------------------------------
+  Overall Compile Time:              515.60
+  Overall Compile Wall Clock Time:   542.74
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1

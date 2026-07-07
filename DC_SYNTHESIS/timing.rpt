@@ -1,0 +1,76 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : ahb_top
+Version: T-2022.03-SP5
+Date   : Tue Jul  7 04:00:20 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: tsl18fs120_scl_ss   Library: tsl18fs120_scl_ss
+Wire Load Model Mode: top
+
+  Startpoint: u_master/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: dbg_HRDATA[16]
+            (output port clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ahb_top            4000000               tsl18fs120_scl_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_master/current_state_reg[1]/CP (dfcrq4)               0.00 #     0.00 r
+  u_master/current_state_reg[1]/Q (dfcrq4)                0.52       0.52 f
+  u_master/U308/ZN (inv0d2)                               0.16       0.68 r
+  u_master/U312/ZN (nr02d2)                               0.11       0.78 f
+  u_master/U313/ZN (nd12d2)                               0.31       1.09 f
+  u_master/U314/ZN (nd12d2)                               0.19       1.29 r
+  u_master/U315/Z (buffda)                                0.25       1.54 r
+  u_master/U317/ZN (invbdf)                               0.17       1.70 f
+  u_master/U318/ZN (nd02d2)                               0.12       1.82 r
+  u_master/U322/ZN (oaim211d1)                            0.18       2.00 f
+  u_master/HADDR[5] (ahb_master)                          0.00       2.00 f
+  U89/ZN (inv0d4)                                         0.20       2.20 r
+  U90/ZN (invbdf)                                         0.31       2.51 f
+  u_slave0/HADDR[5] (ahb_slave_00000000_000003ff)         0.00       2.51 f
+  u_slave0/U1572/ZN (inv0d0)                              0.73       3.23 r
+  u_slave0/U1582/ZN (nr02d2)                              0.26       3.50 f
+  u_slave0/U1588/ZN (nd02d2)                              0.55       4.05 r
+  u_slave0/U78/ZN (nr02d4)                                0.92       4.97 f
+  u_slave0/U202/Z (buffd3)                                0.85       5.82 f
+  u_slave0/U7419/ZN (aoi22d1)                             0.30       6.12 r
+  u_slave0/U1469/ZN (nd04d0)                              0.26       6.38 f
+  u_slave0/U7432/ZN (nr04d0)                              0.88       7.26 r
+  u_slave0/U7496/ZN (nd04d0)                              0.37       7.63 f
+  u_slave0/U7497/Z (mx02d1)                               0.41       8.04 f
+  u_slave0/U7498/Z (an02d0)                               0.26       8.30 f
+  u_slave0/HRDATA[16] (ahb_slave_00000000_000003ff)       0.00       8.30 f
+  u_mux/HRDATA0[16] (ahb_mux)                             0.00       8.30 f
+  u_mux/U94/ZN (aoi22d1)                                  0.19       8.49 r
+  u_mux/U96/ZN (nd02d4)                                   0.51       9.00 f
+  u_mux/HRDATA[16] (ahb_mux)                              0.00       9.00 f
+  dbg_HRDATA[16] (out)                                    0.00       9.00 f
+  data arrival time                                                  9.00
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  output external delay                                  -1.00       9.00
+  data required time                                                 9.00
+  --------------------------------------------------------------------------
+  data required time                                                 9.00
+  data arrival time                                                 -9.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

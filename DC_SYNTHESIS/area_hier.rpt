@@ -1,0 +1,50 @@
+ 
+****************************************
+Report : area
+Design : ahb_top
+Version: T-2022.03-SP5
+Date   : Tue Jul  7 04:00:18 2026
+****************************************
+
+Library(s) Used:
+
+    tsl18fs120_scl_ss (File: /mnt/c2s/cadence/Analog_tools/FOUNDRY/scl_pdk/stdlib/fs120/spc/liberty/lib_flow_ss/tsl18fs120_scl_ss.db)
+
+Number of ports:                         1068
+Number of nets:                         96151
+Number of cells:                        95210
+Number of combinational cells:          62262
+Number of sequential cells:             32908
+Number of macros/black boxes:               0
+Number of buf/inv:                       4840
+Number of references:                      15
+
+Combinational area:            1360971.192218
+Buf/Inv area:                    78211.600951
+Noncombinational area:         1961606.850082
+Macro/Black Box area:                0.000000
+Net Interconnect area:          219072.477867
+
+Total cell area:               3322578.042300
+Total area:                    3541650.520167
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area                Local cell area
+                                  ---------------------  ---------------------------------- 
+Hierarchical cell                 Absolute      Percent  Combi-        Noncombi-     Black-
+                                  Total         Total    national      national      boxes   Design
+--------------------------------  ------------  -------  ------------  ------------  ------  ---------------------------
+ahb_top                           3322578.0423    100.0     2440.0000        0.0000  0.0000  ahb_top
+u_decoder                             297.9300      0.0      297.9300        0.0000  0.0000  ahb_decoder
+u_master                            23011.9101      0.7    13722.5600     9289.3501  0.0000  ahb_master
+u_mux                                2333.4700      0.1     2333.4700        0.0000  0.0000  ahb_mux
+u_slave0                           805168.2001     24.2   317088.8251   488079.3750  0.0000  ahb_slave_00000000_000003ff
+u_slave1                           827195.7744     24.9   339116.3994   488079.3750  0.0000  ahb_slave_00000400_000007ff
+u_slave2                           830607.1236     25.0   342527.7486   488079.3750  0.0000  ahb_slave_00000800_00000bff
+u_slave3                           831523.6342     25.0   343444.2592   488079.3750  0.0000  ahb_slave_00000c00_00000fff
+--------------------------------  ------------  -------  ------------  ------------  ------  ---------------------------
+Total                                                    1360971.1922  1961606.8501  0.0000
+
+1
