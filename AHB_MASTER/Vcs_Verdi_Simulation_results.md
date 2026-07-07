@@ -144,3 +144,135 @@ Throughout the simulation, `HRESP` remains low, indicating that all transfers co
 ## Observation
 
 The simulation confirms that the AHB Master correctly implements the AMBA AHB protocol by generating valid address, control, and data signals for single and burst transfers. Address incrementing, wrap-around addressing, wait-state handling, and read/write operations all behave as expected, demonstrating successful protocol compliance and functional correctness of the master design.
+
+# Simulation Flow (VCS + Verdi)
+
+### 1. Clean Previous Run
+
+```bash
+rm -rf simv simv.daidir csrc ucli.key *.vcd *.fsdb *.log
+```
+
+### 2. Compile RTL and Testbench
+
+```bash
+vcs -full64 -sverilog \
+ahb_master.v \
+ahb_slave.v \
+tb_ahb_burst.sv \
+-debug_access+all \
+-kdb \
+-lca \
+-o simv
+```
+
+### 3. Run Simulation
+
+```bash
+./simv
+```
+
+### 4. Open Waveform in Verdi (VCD)
+
+```bash
+verdi -sv \
+ahb_master.v \
+ahb_slave.v \
+tb_ahb_burst.sv \
+-ssf ahb_burst.vcd &
+```
+
+### 5. Open Waveform in Verdi (FSDB)
+
+```bash
+verdi -sv \
+ahb_master.v \
+ahb_slave.v \
+tb_ahb_burst.sv \
+-ssf ahb.fsdb &
+```
+
+---
+
+# Using a File List
+
+### Create File List
+
+```bash
+ls *.v *.sv > filelist.f
+```
+
+### Compile Using File List
+
+```bash
+vcs -full64 -f filelist.f \
+-debug_access+all \
+-kdb \
+-lca \
+-o simv
+```
+
+### Run Simulation
+
+```bash
+./simv
+```
+
+### Open Verdi
+
+```bash
+verdi -f filelist.f -ssf ahb_burst.vcd &
+```
+
+---
+
+# Generate FSDB Dump
+
+Add the following code in the testbench:
+
+```verilog
+initial begin
+    $fsdbDumpfile("ahb.fsdb");
+    $fsdbDumpvars(0, tb_ahb_burst);
+end
+```
+
+---
+
+# One-Line Compile + Run + Verdi
+
+```bash
+rm -rf simv simv.daidir csrc *.vcd *.fsdb && \
+vcs -full64 -sverilog ahb_master.v ahb_slave.v tb_ahb_burst.sv \
+-debug_access+all -kdb -lca -o simv && \
+./simv && \
+verdi -sv ahb_master.v ahb_slave.v tb_ahb_burst.sv -ssf ahb_burst.vcd &
+```
+
+---
+
+# Useful Linux Commands
+
+```bash
+pwd
+```
+
+```bash
+ls
+```
+
+```bash
+mkdir waves
+```
+
+```bash
+cp ahb_burst.vcd waves/
+```
+
+```bash
+find . -name "*.v"
+```
+
+```bash
+find . -name "*.sv"
+```
