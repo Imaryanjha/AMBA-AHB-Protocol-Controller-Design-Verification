@@ -16,6 +16,61 @@ The objective is to gain hands-on experience in RTL design, finite state machine
 
 ---
 
+## 📂 Repository Structure
+
+```text
+AMBA_AHB_BUS/
+│
+├── 📁 AHB_DECODE/
+│   ├── Verdi_Vcs_Simulation_Results.md
+│   ├── ahb_decoder.v
+│   └── tb_ahb_decoder.v
+│
+├── 📁 AHB_MASTER/
+│   ├── AHB_MASTER_FSM.pdf
+│   ├── Vcs_Verdi_Simulation_Results.md
+│   ├── ahb_master.v
+│   ├── tb_ahb_master.v
+│   └── README.md
+│
+├── 📁 AHB_MULTIPLEXER/
+│   ├── Vcs_Verdi_Simulation_Results.md
+│   ├── ahb_mux.v
+│   └── tb_ahb_mux.v
+│
+├── 📁 AHB_SLAVE/
+│   ├── README.md
+│   ├── Vcs_Verdi_Simulation_Results.md
+│   ├── ahb_slave.v
+│   └── tb_ahb_slave.v
+│
+├── 📁 AHB_TOP/
+│   ├── Vcs_Verdi_Simulation_Results.md
+│   ├── ahb_top.v
+│   └── tb_ahb_top.v
+│
+├── 📁 DC_SYNTHESIS/
+│   ├── README.md
+│   ├── ahb_top.tcl
+│   ├── area.rpt
+│   ├── area_hier.rpt
+│   ├── constraints.rpt
+│   ├── hierarchy.rpt
+│   ├── power.rpt
+│   ├── qor.rpt
+│   ├── timing.rpt
+│   └── timing_top20.rpt
+│
+├── 📁 Spyglass_Linting/
+│   ├── README.md
+│   ├── elab_summary.rpt
+│   ├── summary.rpt
+│   ├── spyglass_violations.rpt
+│   └── SignalUsageReport.rpt
+│
+└── 📄 README.md
+```
+
 ## Features
 
 - AMBA-AHB compliant RTL implementation
