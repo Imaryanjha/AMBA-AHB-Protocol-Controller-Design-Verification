@@ -3,6 +3,9 @@ Designed an AMBA-AHB compliant bus architecture including Master, Slave, Decoder
 
 ---
 
+<img width="1920" height="1080" alt="Screenshot from 2026-07-07 04-05-55" src="https://github.com/user-attachments/assets/c08ac9a3-08fd-4e09-88da-9323b92c7f8f" />
+
+
 ## Project Overview
 
 The AMBA Advanced High-performance Bus (AHB) is a high-speed pipelined bus protocol developed by ARM for efficient communication between processors, memories, and high-performance peripherals in modern SoCs.
