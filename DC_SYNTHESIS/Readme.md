@@ -2,7 +2,19 @@
 
 The AHB subsystem was synthesized using **Synopsys Design Compiler** targeting the **TSL18FS120 Standard Cell Library**. This section summarizes the key synthesis metrics including timing, area, power, hierarchy, and quality of results (QoR).
 
+```
+ahb_top
+
+│
+├── ahb_master
+├── ahb_decoder
+├── ahb_mux
+├── ahb_slave0
+├── ahb_slave1
+├── ahb_slave2
+└── ahb_slave3
 ---
+```
 
 ## 🎯 Design Overview
 
