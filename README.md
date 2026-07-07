@@ -31,35 +31,13 @@ The objective is to gain hands-on experience in RTL design, finite state machine
 
 ## Architecture
 
-```
-                     +----------------------+
-                     |      AHB Master      |
-                     +----------+-----------+
-                                |
-                                |
-                HADDR HWRITE HTRANS HSIZE HBURST
-                                |
-                                |
-               +----------------+----------------+
-               |                                 |
-               |        Address Decoder          |
-               |                                 |
-               +----------------+----------------+
-                                |
-            -----------------------------------------
-            |                    |                  |
-            |                    |                  |
-      +------------+      +------------+     +------------+
-      |  Slave 0   |      |  Slave 1   | ... |  Slave N   |
-      +------------+      +------------+     +------------+
-            |                    |                  |
-            ----------------+----+------------------
-                             |
-                      Read Data MUX
-                             |
-                             |
-                        HRDATA Output
-```
+<img width="1103" height="425" alt="image" src="https://github.com/user-attachments/assets/1685925f-1a78-44ec-ba9b-6677ae6c73b2" />
+
+
+## Interconnect Diagram
+
+<img width="1028" height="838" alt="image" src="https://github.com/user-attachments/assets/6c66923e-94f1-47e5-ba86-ce5db7d9f27b" />
+
 
 ---
 
@@ -129,27 +107,7 @@ IDLE
 
 ---
 
-## Verification
 
-The design is verified using custom Verilog testbenches.
-
-Verification includes
-
-- Single Write
-- Single Read
-- Burst Transactions
-- Address Decoding
-- Slave Selection
-- Wait State Handling
-- Protocol Compliance
-- Corner Case Testing
-
-Simulation Tools
-
-- Synopsys VCS
-- Verdi Waveform Debugger
-
----
 
 ## RTL Quality Checks
 
@@ -183,36 +141,6 @@ Reports Generated
 
 ---
 
-## Repository Structure
-
-```
-AMBA-AHB-Controller/
-│
-├── rtl/
-│   ├── ahb_master.v
-│   ├── ahb_slave.v
-│   ├── decoder.v
-│   ├── mux.v
-│   ├── top.v
-│
-├── tb/
-│   ├── ahb_tb.v
-│
-├── waveforms/
-│
-├── spyglass/
-│
-├── synthesis/
-│
-├── constraints/
-│   ├── top.sdc
-│
-├── reports/
-│
-├── docs/
-│
-└── README.md
-```
 
 ---
 
@@ -225,7 +153,7 @@ AMBA-AHB-Controller/
 | Debug | Verdi |
 | Lint | SpyGlass |
 | Synthesis | Synopsys Design Compiler |
-| Version Control | Git |
+
 
 ---
 
@@ -259,20 +187,7 @@ AMBA-AHB-Controller/
 
 ---
 
-## Learning Outcomes
 
-Through this project I gained practical experience in
-
-- RTL Design
-- Finite State Machine Design
-- AMBA-AHB Protocol
-- ASIC Verification Flow
-- RTL Linting
-- ASIC Synthesis
-- Timing Analysis
-- Waveform Debugging
-- Modular Verilog Design
-- Industrial RTL Coding Practices
 
 ---
 
