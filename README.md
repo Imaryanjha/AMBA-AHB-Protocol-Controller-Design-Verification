@@ -83,29 +83,10 @@ The objective is to gain hands-on experience in RTL design, finite state machine
 
 ## Finite State Machine
 
-Master Controller States
+<img width="1920" height="1080" alt="Screenshot from 2026-07-05 06-25-22 (1)" src="https://github.com/user-attachments/assets/19ff7097-67bb-4155-8ec0-049cc2efcb30" />
 
-```
-IDLE
-  |
-  V
-ADDRESS_PHASE
-  |
-  V
-DATA_PHASE
-  |
-  +------+
-  |      |
-  V      |
-BURST    |
-  |      |
-  +------+
-  |
-  V
-IDLE
-```
 
----
+
 
 
 
